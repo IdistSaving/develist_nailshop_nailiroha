@@ -47,7 +47,6 @@ angular.module('nailShopApp')
             });
             $rootScope.stateS.go('landing',null, null);
           },function(dataResponse_error){
-          $rootScope.stateS.go('landing',null, null);
         });
       });
     };
