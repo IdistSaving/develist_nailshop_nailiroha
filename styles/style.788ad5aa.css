@@ -1,0 +1,38 @@
+/** Ultra Light */
+@font-face { font-family: "San Francisco"; font-weight: 100; src: url("../fonts/SFDisplay-Ultralight.woff"); }
+@font-face { font-family: "SFDisplay-Ultralight"; src: url("../fonts/SFDisplay-Ultralight.woff"); }
+/** Ultra Light */
+@font-face { font-family: "San Francisco"; font-weight: 200; src: url("../fonts/SFDisplay-Light.woff"); }
+@font-face { font-family: "SFDisplay-Light"; src: url("../fonts/SFDisplay-Light.woff"); }
+/** Thin */
+@font-face { font-family: "San Francisco"; font-weight: 300; src: url("../fonts/SFDisplay-Thin.woff"); }
+@font-face { font-family: "SFDisplay-Thin"; src: url("../fonts/SFDisplay-Thin.woff"); }
+/** Regular */
+@font-face { font-family: "San Francisco"; font-weight: 400; src: url("../fonts/SFDisplay-Regular.woff"); }
+@font-face { font-family: "SFDisplay-Regular"; src: url("../fonts/SFDisplay-Regular.woff"); }
+/** Medium */
+@font-face { font-family: "San Francisco"; font-weight: 500; src: url("../fonts/SFDisplay-Medium.woff"); }
+@font-face { font-family: "SFDisplay-Medium"; src: url("../fonts/SFDisplay-Medium.woff"); }
+/** Semi Bold */
+@font-face { font-family: "San Francisco"; font-weight: 600; src: url("../fonts/SFDisplay-Semibold.woff"); }
+@font-face { font-family: "SFDisplay-Semibold"; src: url("../fonts/SFDisplay-Semibold.woff"); }
+/** Bold */
+@font-face { font-family: "San Francisco"; font-weight: 700; src: url("../fonts/SFDisplay-Bold.woff"); }
+@font-face { font-family: "SFDisplay-Bold"; src: url("../fonts/SFDisplay-Bold.woff"); }
+/** Heavy */
+@font-face { font-family: "San Francisco"; font-weight: 800; src: url("../fonts/SFDisplay-Heavy.woff"); }
+@font-face { font-family: "SFDisplay-Heavy"; src: url("../fonts/SFDisplay-Heavy.woff"); }
+/** Black */
+@font-face { font-family: "San Francisco"; font-weight: 900; src: url("../fonts/SFDisplay-Black.woff"); }
+@font-face { font-family: "SFDisplay-Black"; src: url("../fonts/SFDisplay-Black.woff"); }
+
+.f-sf {font-family:'San Francisco', sans-serif !important;}
+.f-sf-ultralight {font-family:'SFDisplay-Ultralight', sans-serif !important;}
+.f-sf-light {font-family:'SFDisplay-Light', sans-serif !importßant;}
+.f-sf-thin {font-family:'SFDisplay-Thin', sans-serif !important;}
+.f-sf-regular {font-family:'SFDisplay-Regular', sans-serif !important;}
+.f-sf-medium {font-family:'SFDisplay-Medium', sans-serif !important;}
+.f-sf-semibold {font-family:'SFDisplay-Semibold', sans-serif !important;}
+.f-sf-bold {font-family:'SFDisplay-Bold', sans-serif !important;}
+.f-sf-heavy {font-family:'SFDisplay-Heavy', sans-serif !important;}
+.f-sf-black {font-family:'SFDisplay-Black', sans-serif !important;}
