@@ -1,0 +1,59 @@
+<div class="w-100">
+  <!-- WEB -->
+  <div class="w-100 d-n-X500 animated v-hidden" ng-if="!($root.state.current.name == 'landing/admin')" in-view="menuInview=$inview" ng-class="{'fadeInUp v-visible':menuInview==true}">
+    <div class="w-100">
+      <!-- Line -->
+      <div class="p-a cen w-100 h-1px b-bdbdbd z-1"></div>
+      <div class="b-we z-2">
+        <span class="mr-30px f-24px c-bk t-l">{{price.title}}</span>
+      </div>
+      <div class="f-r b-we z-2">
+        <span class="ml-30px f-24px c-bk t-l">{{price.cost}}</span>
+      </div>
+    </div>
+    <div class="w-50 mt-10px">
+      <span class="w-100 f-18px c-bk t-l">{{price.description}}</span>
+    </div>
+  </div>
+  <!-- Admin Field -->
+  <div class="w-100 d-n-X500" ng-if="($root.state.current.name == 'landing/admin')">
+    <div class="w-100 cen-x">
+      <div class="p-a w-64D844M100 cen-y">
+        <button class="w-20px h-20px bor-100 c-rd-H cr-pointer" ng-click="removeMenu(price);">
+          <i class="f-20px lh-22px t-c ion-android-close cen-x"></i>
+        </button>
+      </div>
+      <div class="w-780D844M100 c-rd cen-x">
+        <div class="w-100">
+          <!-- Line -->
+          <div class="p-a cen w-100 h-1px b-bdbdbd z-1"></div>
+          <div class="b-we z-2">
+            <input class="mr-30px f-24px c-bk t-l" placeholder="메뉴 이름을 입력해주세요" ng-model="price.title"></input>
+          </div>
+          <div class="f-r b-we z-2">
+            <input class="ml-30px f-24px c-bk t-r" placeholder="가격을 입력해주세요" ng-model="price.cost"></input>
+          </div>
+        </div>
+        <div class="w-50 mt-10px">
+          <textarea rows="1" msd-elastic class="w-100 f-18px c-bk t-l" placeholder="메뉴를 설명해주세요" style="resize:none;" ng-model="price.description"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- APP -->
+  <div class="w-100 d-n-N500 animated v-hidden" in-view="menuInview=$inview" ng-class="{'fadeInUp v-visible':menuInview==true}">
+    <div class="w-100">
+      <!-- Line -->
+      <div class="p-a cen w-100 h-1px b-bdbdbd z-1"></div>
+      <div class="b-we z-2">
+        <span class="mr-15px f-15px c-bk t-l">{{price.title}}</span>
+      </div>
+      <div class="f-r b-we z-2">
+        <span class="ml-15px f-15px c-bk t-l">{{price.cost}}</span>
+      </div>
+    </div>
+    <div class="w-100 mt-10px">
+      <span class="f-12px c-bk t-l">{{price.description}}</span>
+    </div>
+  </div>
+</div>

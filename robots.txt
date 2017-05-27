@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+Sitemap:http://nailshop.develist.com/sitemap.xml
+
+User-agent:Yeti
+Disallow:

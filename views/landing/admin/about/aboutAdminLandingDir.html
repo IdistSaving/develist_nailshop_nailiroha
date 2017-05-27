@@ -1,0 +1,35 @@
+<div class="w-100 h-100">
+  <title-landing-dir text="'ABOUT'"></title-landing-dir>
+  <!-- WEB -->
+  <div class="w-100 h-100 pb-120px d-n-X450">
+    <div class="xw-1080px w-100 xh-390px h-100 cen-x">
+      <!-- Image -->
+      <div class="w-390D1080M100 b-bdbdbd bo-1px b-we-H c-we c-bdbdbd-H" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeAboutImage($file);">
+        <div class="w-100 pt-100">
+          <img class="p-a t-0 l-0 w-100 h-100 b-img z-1" ng-src="{{updatedNailShop.about_image||nailShop.about_image}}"/>
+          <div class="p-a w-100 h-100 t-0 l-0 z-2">
+            <div class="cen">
+              <i class="t-c w-100 f-40px lh-42px ion-images cen-x"></i>
+              <span class="t-c w-100 mt-15px f-18px lh-20px">이미지 추가</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="f-r xw-525px mt-30px">
+        <!-- Title -->
+        <div class="w-100 h-48px bo-1px c-bdbdbd">
+          <div class="w-100_15px h-100_15px cen">
+            <textarea style="resize:none;" class="w-100 f-18px pc-gy c-676767 t-l" ng-model="updatedNailShop.about_title" placeholder="{{nailShop.about_title}}"></textarea>
+          </div>
+        </div>
+        <!-- Text 1 -->
+        <div class="mt-60px w-100 h-228px bo-1px c-bdbdbd">
+          <div class="w-100_15px h-100_15px cen">
+            <textarea style="resize:none;" class="w-100 h-100 f-18px pc-gy c-676767 t-l" ng-model="updatedNailShop.about_description" placeholder="{{nailShop.about_description}}"></textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

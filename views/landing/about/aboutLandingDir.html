@@ -1,0 +1,130 @@
+<div class="w-100">
+  <title-landing-dir id="section0" text="'ABOUT'"></title-landing-dir>
+  <!-- WEB -->
+  <div class="w-100 pb-120px d-n-X1000">
+    <div class="xw-1080px w-100 xh-390px cen-x">
+      <!-- Image -->
+      <div class="w-50">
+        <div class="w-100 pt-100">
+          <div class="p-a w-100 h-100 t-0 l-0">
+            <div class="w-400D540M100 cen">
+              <div class="w-100 pt-100">
+                <!-- Admin Field -->
+                <div class="p-a w-100 h-100 t-0 l-0 c-we b-bk-H o-50-H z-2 c-we-H cr-pointer"  ng-if="($root.state.current.name == 'landing/admin')"
+                ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeAboutImage($file);">
+                  <div class="cen">
+                    <i class="f-100px lh-102px t-c cen-x ion-images"></i>
+                    <span class="w-100 mt-15px f-18px lh-20 t-c cen-x">이미지 업데이트</span>
+                  </div>
+                </div>
+                <div class="p-a w-100 h-100 t-0 l-0 z-1">
+                  <img class="w-100 h-100 b-img" ng-src="{{data.about_image||nailShop.about_image}}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Description -->
+      <div class="w-50">
+        <div class="w-100 pt-100">
+          <div class="p-a w-100 h-100 t-0 l-0">
+            <!-- Admin Field -->
+            <div class="xw-520px w-100 cen" ng-if="($root.state.current.name == 'landing/admin')">
+              <!-- Title -->
+              <div class="w-100">
+                <textarea class="w-100 f-36px f-wb c-676767 t-l" placeholder="소개글 제목을 입력해주세요" ng-model="data.about_title" style="resize:none;"></textarea>
+              </div>
+              <!-- Text -->
+              <div class="mt-30px w-100">
+                <textarea msd-elastic class="w-100 h-100 f-18px c-676767 t-l" placeholder="간단한 서비스 설명을 입력해주세요" ng-model="data.about_description" style="resize:none;"></textarea>
+              </div>
+            </div>
+            <div class="xw-520px w-100 cen" ng-if="!($root.state.current.name == 'landing/admin')">
+              <!-- Title -->
+              <div class="w-100">
+                <span class="f-36px f-wb c-676767 t-l">{{data.about_title||data.about_title}}</span>
+              </div>
+              <!-- Text -->
+              <div class="mt-30px w-100">
+                <span class="f-18px c-676767 t-l">{{data.about_description||data.about_description}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tablet -->
+  <div class="w-100 pb-60px d-n-X500 d-n-N1000">
+    <div class="xw-708px w-100 xh-354px cen-x">
+      <!-- Image -->
+      <div class="w-50">
+        <div class="w-100 pt-100">
+          <div class="p-a w-100 h-100 t-0 l-0">
+            <div class="w-324D354M100 cen">
+              <div class="w-100 pt-100">
+                <!-- Admin Field -->
+                <div class="p-a w-100 h-100 t-0 l-0 c-we b-bk-H o-50-H z-2 c-we-H cr-pointer"
+                ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeAboutImage($file);" ng-if="isAdmin">
+                  <div class="cen">
+                    <i class="f-100px lh-102px t-c cen-x ion-images"></i>
+                    <span class="w-100 mt-15px f-18px lh-20 t-c cen-x">이미지 업데이트</span>
+                  </div>
+                </div>
+                <div class="p-a w-100 h-100 t-0 l-0 z-1">
+                  <img class="w-100 h-100 b-img" ng-src="{{data.about_image||nailShop.about_image}}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Description -->
+      <div class="w-50">
+        <div class="w-100 pt-100">
+          <div class="p-a w-100 h-100 t-0 l-0">
+            <!-- Admin Field -->
+            <div class="xw-324px w-100 cen" ng-if="($root.state.current.name == 'landing/admin')">
+              <!-- Title -->
+              <div class="w-100">
+                <textarea class="w-100 f-24px f-wb c-676767 t-l" placeholder="소개글 제목을 입력해주세요" ng-model="data.about_title" style="resize:none;"></textarea>
+              </div>
+              <!-- Text -->
+              <div class="mt-30px w-100">
+                <textarea msd-elastic class="w-100 h-100 f-15px c-676767 t-l" placeholder="간단한 서비스 설명을 입력해주세요" ng-model="data.about_description" style="resize:none;"></textarea>
+              </div>
+            </div>
+            <div class="xw-520px w-100 cen" ng-if="!($root.state.current.name == 'landing/admin')">
+              <!-- Title -->
+              <div class="w-100">
+                <span class="f-24px f-wb c-676767 t-l">{{data.about_title||nailShop.about_title}}</span>
+              </div>
+              <!-- Text -->
+              <div class="mt-30px w-100">
+                <span class="f-15px c-676767 t-l">{{data.about_description||nailShop.about_description}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- APP -->
+  <div class="w-100 h-100 pb-40px d-n-N500">
+    <!-- Image -->
+    <div class="w-150D375M100 cen-x">
+      <img class="w-100 h-100 b-img" ng-src="{{data.about_image||nailShop.about_image}}"/>
+    </div>
+    <div class="xw-350D375M100 mt-30px cen-x">
+      <!-- Title -->
+      <div class="cen-x">
+        <span class="f-18px f-wb c-676767 t-c">{{data.about_title||nailShop.about_title}}</span>
+      </div>
+      <!-- Text -->
+      <div class="mt-30px w-100">
+        <span class="f-12px c-676767 t-c">{{data.about_description||nailShop.about_description}}</span>
+      </div>
+    </div>
+  </div>
+</div>

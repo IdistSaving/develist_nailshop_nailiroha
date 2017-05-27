@@ -1,0 +1,55 @@
+<div class="w-100" ng-init="titleInview=false;">
+  <!-- WEB -->
+  <div class="w-100 d-n-X1000">
+  <!-- <div class="w-100 d-n-X1000 animated v-hidden" in-view="titleInview=$inview" ng-class="{'fadeInUp v-visible':titleInview==true}"> -->
+    <div class="w-790D1902M100 cen-x">
+      <input class="w-100 h-100 f-30px c-bk t-c ls-30px cen-x" ng-if="($root.state.current.name == 'landing/admin')" placeholder="타이틀을 입력해주세요" ng-model="data.description" style="resize:none;"></input>
+      <span class="w-100 f-30px c-bk t-c ls-30px cen-x" ng-if="!($root.state.current.name == 'landing/admin')">{{data.description}}</span>
+      <div class="mt-10px w-400px h-1px b-bk cen-x"></div>
+      <!-- Logo Update -->
+      <div class="mt-30px w-100">
+        <div class="p-a w-100 h-100 t-0 l-0 c-we b-bk-H o-50-H z-2 cr-pointer"
+        ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeTitleImage($file);" ng-if="($root.state.current.name == 'landing/admin')">
+          <div class="cen">
+            <i class="f-80px lh-82px t-c cen-x ion-images"></i>
+            <span class="w-100 mt-5px f-18px lh-20 t-c cen-x">로고 업데이트</span>
+          </div>
+        </div>
+        <div class="w-60 h-30 cen-x">
+          <img class="w-100 h-100 b-img" ng-src="{{data.cover_logo||nailShop.cover_logo}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tablet -->
+  <div class="w-100 d-n-X500 d-n-N1000">
+    <div class="w-440D768M100 cen-x">
+      <input class="w-100 h-100 f-18px  c-bk t-c ls-20px cen-x" ng-if="($root.state.current.name == 'landing/admin')" placeholder="타이틀을 입력해주세요" ng-model="data.description" style="resize:none;"></input>
+      <span class="w-100 f-18px c-bk t-c ls-18px cen-x" ng-if="!($root.state.current.name == 'landing/admin')">{{data.description}}</span>
+      <div class="mt-10px w-340px h-1px b-bk cen-x"></div>
+      <!-- Logo Update -->
+      <div class="mt-30px w-100">
+        <div class="p-a w-100 h-100 t-0 l-0 c-we b-bk-H o-50-H z-2 cr-pointer"
+        ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeAboutImage($file);" ng-if="($root.state.current.name == 'landing/admin')">
+          <div class="cen">
+            <i class="f-60px lh-62px t-c cen-x ion-images"></i>
+            <span class="w-100 mt-5px f-15px lh-17 t-c cen-x">로고 업데이트</span>
+          </div>
+        </div>
+        <img class="w-100 h-100 b-img" ng-src="{{data.cover_logo||nailShop.cover_logo}}"/>
+      </div>
+    </div>
+  </div>
+  <!-- APP -->
+  <div class="w-100 h-100 d-n-N500">
+    <div class="w-198px cen">
+      <div class="cen-x">
+        <span class="f-12px c-bk t-l ls-12px">{{data.description}}</span>
+      </div>
+      <div class="mt-10px w-150px cen-x h-1px b-bk"></div>
+      <div class="w-100 mt-10px">
+        <img class="w-100 h-100 b-img" ng-src="{{data.cover_logo||nailShop.cover_logo}}"/>
+      </div>
+    </div>
+  </div>
+</div>

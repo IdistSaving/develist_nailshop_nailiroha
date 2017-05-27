@@ -1,0 +1,19 @@
+<div class="w-100 h-100">
+  <!-- WEB -->
+  <!-- Admin Field -->
+  <div class="p-a r-0 b-0 mb-30px mr-120D1920M100 w-120px h-120px z-2" ng-if="($root.state.current.name == 'landing/admin')">
+    <div class="w-100 h-100 bor-100 b-we bs-3_3_3__bk_50 c-we-H b-bk-H" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeCoverImage($file);">
+      <div class="cen">
+        <i class="f-45px lh-47px t-c cen-x ion-images"></i>
+        <span class="w-100 mt-5px f-15px lh-17px t-c cen-x">커버 업데이트</span>
+      </div>
+    </div>
+  </div>
+  <div class="w-100 h-100 d-n-X500 z-1">
+    <img class="w-100 h-100 b-img" ng-src="{{data.cover_image||nailShop.cover_image}}"/>
+  </div>
+  <!-- APP -->
+  <div class="w-100 h-100 d-n-N500">
+    <img class="w-100 h-100 b-img" ng-src="{{data.cover_image||nailShop.cover_image}}"/>
+  </div>
+</div>

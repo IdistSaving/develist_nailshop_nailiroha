@@ -1,0 +1,29 @@
+<div class="w-100" ng-init="priceInview=false;">
+  <!-- WEB -->
+  <div class="w-844D1920M100 d-n-X1000 cen-x">
+    <list-price-landing-dir data="data" price="price" price-index="price_index" ng-repeat="(price_index ,price) in data.prices track by price_index"
+    ng-class="[
+    {'mt-30px':price_index>0}
+    ]" ng-show="price.show!=false"></list-price-landing-dir>
+    <button class="w-45px h-45px c-bdbdbd c-44bfff-H cen-x" ng-if="($root.state.current.name == 'landing/admin')" ng-click="addMenu();">
+      <i class="f-45px lh-47px t-l ion-android-add-circle"></i>
+    </button>
+  </div>
+  <!-- Tablet -->
+  <div class="w-844D1000M100 d-n-X500 d-n-N1000 cen-x">
+    <list-price-landing-dir data="data" price="price" nail-shop="nailShop"  ng-repeat="(price_index ,price) in prices track by price_index"
+    ng-class="[
+    {'mt-30px':price_index>0}
+    ]"></list-price-landing-dir>
+    <button class="w-45px h-45px c-bdbdbd c-44bfff-H cen-x" ng-if="($root.state.current.name == 'landing/admin')" ng-click="addMenu();">
+      <i class="f-45px lh-47px t-l ion-android-add-circle"></i>
+    </button>
+  </div>
+  <!-- APP -->
+  <div class="w-310D375M100 d-n-N500 cen-x">
+    <list-price-landing-dir data="data" price="price" nail-shop="nailShop"  class="w-100" ng-repeat="(price_index ,price) in prices track by price_index"
+    ng-class="[
+    {'mt-30px':price_index>0}
+    ]"></list-price-landing-dir>
+  </div>
+</div>

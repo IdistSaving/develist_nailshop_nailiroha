@@ -1,0 +1,20 @@
+<div class="w-100 h-100">
+  <div class="p-a t-0 l-0 w-100 h-100 b-bk o-60 z-2"></div>
+  <img class="p-a t-0 l-0 w-100 h-100 b-img z-1" ng-src="{{updatedNailShop.cover_image||nailShop.cover_image}}"/>
+  <div class="p-a r-0 b-0 mb-30px mr-120D1920M100 z-4">
+    <div class="w-100px h-100px bor-100 bo-1px c-bdbdbd b-bdbdbd-H c-we-H">
+      <button class="w-100 h-100" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeCoverImage($file, true);">
+        <div class="w-100">
+          <div class="cen-x">
+            <i class="f-40px t-l ion-images"></i>
+          </div>
+        </div>
+        <div class="w-100 mb-15px">
+          <div class="cen-x">
+            <span class="f-15px">이미지 추가</span>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

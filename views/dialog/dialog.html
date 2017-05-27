@@ -1,0 +1,47 @@
+<div class="p-a w-100vw h-100vh t-0 l-0 b-bk o-50 z-1"></div>
+	<!-- <p>{{$root.calendar_event.title}}</p>
+	<p>시작시간 : {{$root.calendar_event.start.format('YYYY  M월  D일 HH시 mm분')}}</p>
+	<p>종료시간 : {{$root.calendar_event.end.format('YYYY  M월  D일 HH시 mm분')}}</p> -->
+	<!-- <p>종일유무 : {{$root.calendar_event.allDay}}</p> -->
+		<!-- <button ng-click="change();">
+			<span>변경</span>
+		</button> -->
+		<!-- <button ng-click="delete();">
+			<span>삭제</span>
+		</button> -->
+<div class="p-a w-100vw h-100vh t-0 l-0 z-2">
+	<div class="p-a w-400px h-330px bs-3_3_3__bk_5 b-we cen">
+	<div class="p-a t-0 r-0 w-40px h-40px">
+		<button class="w-24px h-24px c-676767 c-rd-H cen" ng-click="close();">
+			<i class="f-24px lh-26px t-c ion-android-close"></i>
+		</button>
+	</div>
+		<div class="mt-45px xw-340px cen-x">
+			<!-- Title -->
+			<div class="w-100">
+				<span class="f-18px lh-20px fw-b c-676767 t-l">예약내용</span>
+			</div>
+			<div class="w-100 mt-10px">
+				<span class="f-18px lh-20px c-676767 t-l">{{$root.calendar_event.title}}</span>
+			</div>
+			<!-- Time -->
+			<div class="mt-30px w-100">
+				<div class="w-100">
+					<span class="f-18px lh-20px fw-b c-676767 t-l">예약시간</span>
+				</div>
+				<div class="w-100 mt-10px">
+					<span class="f-18px lh-20px c-676767 t-l">{{$root.calendar_event.start.format('YYYY년 M월 D일  HH시 mm분')}}</span>
+				</div>
+				<div class="w-100 mt-5px">
+					<span class="f-18px lh-20px c-676767 t-l cen-x">~</span>
+				</div>
+				<div class="w-100 mt-5px">
+					<span class="f-r f-18px lh-20px c-676767 t-l">{{$root.calendar_event.end.format('YYYY년 M월 D일  HH시 mm분')}}</span>
+				</div>
+			</div>
+		</div>
+		<button class="mt-45px w-100" ng-click="delete();">
+			<span class="f-18px lh-20px fw-b c-676767 c-rd-H t-c cen-x">삭제</span>
+		</button>
+	</div>
+</div>

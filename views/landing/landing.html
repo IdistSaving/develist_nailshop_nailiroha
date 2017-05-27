@@ -1,0 +1,10 @@
+<div class="w-100">
+  <header-dir data="data" class="z-4"></header-dir>
+  <cover-landing-dir data="data" nail-shop="nailShop"></cover-landing-dir>
+  <about-landing-dir data="data" nail-shop="nailShop"></about-landing-dir>
+  <stylebook-landing-dir data="data" nail-shop="nailShop"></stylebook-landing-dir>
+  <price-landing-dir data="data"></price-landing-dir>
+  <reservation-landing-dir data="data" ng-if="data&&data.events"></reservation-landing-dir>
+  <contact-landing-dir data="data" nail-shop="nailShop"></contact-landing-dir>
+  <footer-dir class="z-4" ng-if="($root.state.current.name == 'landing/admin')"></footer-dir>
+</div>

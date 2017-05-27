@@ -1,0 +1,14 @@
+<div class="w-100">
+  <!-- WEB -->
+  <div class="w-780D1920M100 cen-x">
+    <list-price-admin-landing-dir class="xw-780px"
+      ng-repeat="(menu_index ,menu) in nailShopPrice track by menu_index"
+      ng-class="[{'mt-30px':menu_index>0}]">
+    </list-price-admin-landing-dir>
+  </div>
+  <div class="mt-15px w-100">
+    <button class="w-45px h-45px cen-x" ng-click="addMenu();">
+      <i class="f-45px c-bdbdbd t-l ion-android-add-circle"></i>
+    </button>
+  </div>
+</div>

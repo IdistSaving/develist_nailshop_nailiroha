@@ -1,0 +1,40 @@
+<div class="w-100 h-100">
+  <!-- WEB -->
+  <div class="w-100 h-100 d-n-X450">
+    <div class="xw-1000px w-100 cen">
+      <div class="w-600D1000M100 h-35px bo-1px c-bdbdbd cen-x">
+        <div class="lh-37px cen-x">
+          <textarea style="resize:none;" class="f-18px c-bdbdbd t-c" placeholder="{{updatedNailShop.cover_title||nailShop.cover_title}}" ng-model="updatedNailShop.description"></textarea>
+        </div>
+      </div>
+      <div class="w-100">
+        <div class="mt-30px w-420px cen-x h-1px b-bdbdbd"></div>
+      </div>
+      <div class="w-100 mt-30px bo-1px c-bdbdbd b-bdbdbd-H c-we-H" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-multiple="false" ngf-select="changeCoverLogoImage($file, true);">
+        <img class="p-a t-0 l-0 w-100 h-100 z-2" ng-src="{{updatedNailShop.cover_logo||nailShop.cover_logo}}" />
+        <button class="w-100">
+          <div class="cen-x">
+            <i class="f-80px ion-images"></i>
+          </div>
+          <div class="w-100 mb-15px">
+            <div class="cen-x">
+              <span class="f-24px t-c">로고 이미지 추가</span>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- APP -->
+  <!-- <div class="w-100 h-100 d-n-N450">
+    <div class="w-198px cen">
+      <div class="cen-x">
+        <span class="f-12px c-bk t-l ls-12px">유니크한 일상</span>
+      </div>
+      <div class="mt-10px w-150px cen-x h-1px b-bk"></div>
+      <div class="w-100 mt-10px">
+        <img class="w-100 h-100 b-img" ng-src="/images/directive/logo.png"/>
+      </div>
+    </div>
+  </div> -->
+</div>

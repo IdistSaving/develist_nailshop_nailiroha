@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://webmastertool.naver.com">
+  <id>http://nailshop.develist.com</id>
+  <title><![CDATA[ 뷰티로드~네일샵 홈페이지제작 ]]></title>
+  <author>
+    <name>뷰티로드~네일샵 홈페이지제작</name>
+  </author>
+
+  <updated>2016-10-21T19:54:15+09:00</updated>
+  <link rel="site" href="http://nailshop.develist.com" />
+
+
+  <entry>
+    <id>http://nailshop.develist.com/landing/</id>
+    <title><![CDATA[ 뷰티로드~네일샵 홈페이지제작 ]]></title>
+    <author>
+      <name>뷰티로드~네일샵 홈페이지제작</name>
+    </author>
+    <updated>2016-10-13T00:00:00+09:00</updated>
+    <published>2016-10-13T00:00:00+09:00</published>
+    <link rel="via" href="http://nailshop.develist.com/landing/" />
+      <content type="html">
+        <![CDATA[
+        &lt;p&gt;네일샵 웹사이트를 PC 버전과 네일샵 모바일버전으로!&lt;br /&gt;
+        SNS 자동 소통 프로그램으로 웹사이트부터 홍보까지 한방에 !
+        부담은 적지만 효과는 확실한 네일샵 맞춤 솔루션을 지금 만나보세요.&lt;br /&gt;]]>
+      </content>
+  </entry>
+</feed>

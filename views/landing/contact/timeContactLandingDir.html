@@ -1,0 +1,40 @@
+<div class="w-100 h-100">
+  <!-- WEB -->
+  <div class="w-100 d-n-X450">
+    <div class="w-100">
+      <div class="cen-x">
+        <span class="f-24px f-18px-X1480 fw-b c-bk t-c">OPENING TIME</span>
+      </div>
+    </div>
+    <div class="mt-30px w-100">
+      <div class="cen-x">
+        <span class="f-24px f-18px-X1480 c-bk t-c" ng-if="!($root.state.current.name == 'landing/admin')">{{data.time_weekdays}}</span>
+        <input class="f-24px f-18px-X1480 c-bk t-c" placeholder="영업시간" ng-if="($root.state.current.name == 'landing/admin')" ng-model="data.time_weekdays"></input>
+      </div>
+    </div>
+    <div class="mt-15px w-100">
+      <div class="cen-x">
+        <span class="f-24px f-18px-X1480 c-bk t-c" ng-if="!($root.state.current.name == 'landing/admin')">{{data.time_weekend}}</span>
+        <input class="f-24px f-18px-X1480 c-bk t-c" placeholder="추가 영업시간(생략가능)" ng-if="($root.state.current.name == 'landing/admin')" ng-model="data.time_weekend"></input>
+      </div>
+    </div>
+  </div>
+  <!-- APP -->
+  <div class="w-100 d-n-N450">
+    <div class="w-100">
+      <div class="cen-x">
+        <span class="f-15px fw-b c-bk t-c">OPENING TIME</span>
+      </div>
+    </div>
+    <div class="mt-15px w-100">
+      <div class="cen-x">
+        <span class="f-15px c-bk t-c">{{data.time_weekdays}}</span>
+      </div>
+    </div>
+    <div class="mt-15px w-100">
+      <div class="cen-x">
+        <span class="f-15px c-bk t-c">{{data.time_weekend}}</span>
+      </div>
+    </div>
+  </div>
+</div>
