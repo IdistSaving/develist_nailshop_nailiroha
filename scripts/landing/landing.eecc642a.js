@@ -43,7 +43,9 @@ angular.module('nailShopApp')
               $rootScope.stateS.go('landing',null, null);
             }, function(){
               alert('에러가 발생했습니다.');
+              $rootScope.stateS.go('landing',null, null);
             });
+            $rootScope.stateS.go('landing',null, null);
           },function(dataResponse_error){
         });
       });
