@@ -7,9 +7,7 @@ angular.module("nailShopApp")
 
 				// Delete Function Section
 				scope.removeMenu = function(price){
-					if(price&&scope.data&&scope.data.prices){
-						price.show = false;
-					}
+					if(price&&scope.data&&scope.data.prices) price.show = false;
 				};
 
 			},

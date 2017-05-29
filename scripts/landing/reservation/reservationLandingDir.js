@@ -142,7 +142,7 @@ angular.module("nailShopApp")
 											// 	event.show = false;
 											// }
 											console.info('$rootScope.calendar_event._id',$rootScope.calendar_event._id)
-											if($rootScope.calendar_event._id) event.show = false;
+											// if($rootScope.calendar_event._id) event.show = false;
 						        });
 						      	// localStorage.setItem('calendar_events', JSON.stringify( events ) );
 						    	}
