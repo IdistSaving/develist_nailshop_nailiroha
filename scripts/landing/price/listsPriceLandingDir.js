@@ -30,7 +30,8 @@ angular.module("nailShopApp")
 			},
 			replace: true,
 			scope:{
-				data:"=data"
+				data:"=data",
+				nailShop:"=nailShop"
 			},
 			restrict:"EA",
 			templateUrl: 'views/landing/price/listsPriceLandingDir.html'

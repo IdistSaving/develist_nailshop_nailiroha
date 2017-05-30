@@ -107,6 +107,12 @@ angular.module('nailShopApp')
     // };
 
     $scope.initialize = function(){
+      if($rootScope.state.current.name =='landing/admin'){
+        if(!$rootScope.urlParser.getHostname()){
+          alert('회원만 사용가능합니다.');
+          $rootScope.stateS.go('landing/signIn', null, null);
+        }
+      }
       // admin page 에서만 calendar가 selectable이 될 수 있도록 하는 로직
 
       // $scope.initializeSelectableOnCalendar();
@@ -157,10 +163,10 @@ angular.module('nailShopApp')
       // SiteR.update(scope.obj_new, function(){});
 
       $scope.nailShop = {
-        cover_title:"Nailiroha",
+        cover_title:"nailideparis",
         description:"유니크한 일상",
         cover_image:"images/landing/cover/cover.png",
-        cover_logo:"images/directive/logo.png",
+        cover_logo:"images/landing/cover/cover_logo_basic.png",
         about_image:"images/landing/about/image_about.png",
         about_title:"유니크한 일상이 시작되는 곳",
         about_description:"손과 발끝에서 특별한 일상이 시작됩니다. 강남구 논현동에 위치한 네일 이로하는 10년 경력의 전문 디자이너가 여러분에게 숨겨진 매력을 찾아 바꾸는 일상을 경험해보세요. 해외에서 직수입한 재료로 최소의 인원에게만 이루어지는 네일아트. 섬세하고 품격있는 프리미엄 서비스를 만날 수 있습니다.",
@@ -173,11 +179,11 @@ angular.module('nailShopApp')
         style_image7:"images/landing/stylebook/7.png",
         style_image8:"images/landing/stylebook/8.png",
         tel:"010 - 1111 - 2222",
-        kakao:"nailiroha",
+        kakao:"nailideparis",
         kakaotalk_logo:"images/landing/contact/detail/kakaotalk_logo.png",
         location:"서울 다산로 258 동대문 리마크빌 B동 1922호",
-        time_weekdays:"AM 05:00 ~ PM 08:00",
-        time_weekend:"AM 06:00 ~ PM 07:00"
+        time_weekdays:"WEEKDAYS AM 05:00 ~ PM 08:00",
+        time_weekend:"WEEKENDS AM 06:00 ~ PM 07:00"
       };
 
 
