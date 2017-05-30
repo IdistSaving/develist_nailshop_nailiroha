@@ -9,13 +9,8 @@ angular.module('nailShopApp')
   			SiteR.get({
           host: $rootScope.urlParser.getHostname()
   			}, function(dataResponse_success) {
-          // console.info('$rootScope.urlParser.getHostname()',$rootScope.urlParser.getHostname());
           $scope.data_old = angular.copy(dataResponse_success.results[0]);
-          // console.log('$scope.data_old');
-          // console.log($scope.data_old);
           $scope.data = angular.copy($scope.data_old);
-          // console.log('$scope.data');
-          // console.log($scope.data);
   				resolve(dataResponse_success);
   			}, function(dataResponse_error) {
   				reject(dataResponse_error);
