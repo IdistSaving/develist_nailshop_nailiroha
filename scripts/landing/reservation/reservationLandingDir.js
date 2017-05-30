@@ -187,7 +187,7 @@ angular.module("nailShopApp")
 		        }
 		        calendar.fullCalendar('unselect');
 		      },
-		      editable: true,
+		      editable: ($rootScope.state.current.name == 'landing/admin') ? true : false,
 		      drop: function(date, jsEvent, ui) {
 		        console.log('calendar 2 drop');
 		        console.log(date);

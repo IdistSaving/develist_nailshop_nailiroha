@@ -28,12 +28,14 @@
     </div>
     <div class="mt-15px w-100">
       <div class="cen-x">
-        <span class="f-15px c-bk t-c">{{data.time_weekdays||nailShop.time_weekdays}}</span>
+        <span class="f-15px c-bk t-c"  ng-if="!($root.state.current.name == 'landing/admin')">{{data.time_weekdays||nailShop.time_weekdays}}</span>
+        <input class="f-15px c-bk t-c" placeholder="영업시간" ng-if="($root.state.current.name == 'landing/admin')" ng-model="data.time_weekdays"></input>
       </div>
     </div>
     <div class="mt-15px w-100">
       <div class="cen-x">
-        <span class="f-15px c-bk t-c">{{data.time_weekend||nailShop.time_weekend}}</span>
+        <span class="f-15px c-bk t-c"  ng-if="!($root.state.current.name == 'landing/admin')">{{data.time_weekend||nailShop.time_weekend}}</span>
+        <input class="f-15px c-bk t-c" placeholder="추가 영업시간(생략가능)" ng-if="($root.state.current.name == 'landing/admin')" ng-model="data.time_weekend"></input>
       </div>
     </div>
   </div>

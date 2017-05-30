@@ -44,7 +44,8 @@
     <!-- Phone number -->
     <div class="w-100">
       <div class="mt-15px cen-x">
-        <span class="f-15px c-bk t-c">{{data.tel||nailShop.tel}}</span>
+        <span class="f-15px c-bk t-c" ng-if="!($root.state.current.name == 'landing/admin')">{{data.tel||nailShop.tel}}</span>
+        <input class="f-15px c-bk t-c cen-x" ng-if="($root.state.current.name == 'landing/admin')" placeholder="연락처" ng-model="data.tel"></input>
       </div>
     </div>
     <!-- KakaoTalk ID -->
@@ -54,14 +55,16 @@
           <img class="w-17px h-17px cen" ng-src="{{data.kakaotalk_logo||nailShop.kakaotalk_logo}}"/>
         </div>
         <div class="mr-15px">
-          <span class="f-15px c-bk t-c">{{data.kakao||nailShop.kakao}}</span>
+          <span class="f-15px c-bk t-c" ng-if="!($root.state.current.name == 'landing/admin')">{{data.kakao||nailShop.kakao}}</span>
+          <input class="f-15px c-bk t-c" ng-if="($root.state.current.name == 'landing/admin')" placeholder="카톡 아이디" ng-model="data.kakao"></input>
         </div>
       </div>
     </div>
     <!-- Address -->
     <div class="w-100">
       <div class="mt-15px cen-x">
-        <span class="f-15px c-bk t-c">{{data.location||nailShop.location}}</span>
+        <span class="f-15px c-bk t-c" ng-if="!($root.state.current.name == 'landing/admin')">{{data.location||nailShop.location}}</span>
+        <input class="w-100 f-15px c-bk t-c" ng-if="($root.state.current.name == 'landing/admin')" placeholder="주소" ng-model="data.location"></input>
       </div>
     </div>
   </div>
