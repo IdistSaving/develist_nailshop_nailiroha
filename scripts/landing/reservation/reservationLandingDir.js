@@ -171,7 +171,6 @@ angular.module("nailShopApp")
 		            },
 		            true // make the event "stick"
 		          );
-							console.info('renderEvent',renderEvent);
 		          var clientEvents = calendar.fullCalendar('clientEvents');
 		          scope.data.events = [];
 		          angular.forEach(clientEvents, function(event, event_index){
@@ -180,10 +179,11 @@ angular.module("nailShopApp")
 		          		start:event.start,
 		          		end: event.end
 		          	};
+								console.info('event_new',event_new);
+								console.info('event.start',event.start);
 								if(event._id&&Number(event._id)>0) event_new['id'] = Number(event._id);
 		          	scope.data.events.push(event_new);
 								console.info('scope.data.events',scope.data.events);
-
 		          });
 							// ****save 주는 공간
 		          // localStorage.setItem('calendar_events', JSON.stringify( events ) );
