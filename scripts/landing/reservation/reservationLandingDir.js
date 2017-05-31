@@ -73,7 +73,7 @@ angular.module("nailShopApp")
 
 		    var calendar = $('#calendar').fullCalendar({
 					height: 750,
-		      locale:'ko',
+		      local:'ko',
 					lang:'ko',
 					// monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
 			    // monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
@@ -94,6 +94,7 @@ angular.module("nailShopApp")
 							// titleFormat, columnFormat, timeFormat
 						}
 					},
+					nowIndicator: default:true,
 		      defaultView: 'agendaWeek',
 		      events: scope.data.events,
 					timeFormat: 'h:mm',
@@ -171,6 +172,7 @@ angular.module("nailShopApp")
 		            },
 		            true // make the event "stick"
 		          );
+							console.info('renderEvent',renderEvent);
 		          var clientEvents = calendar.fullCalendar('clientEvents');
 		          scope.data.events = [];
 		          angular.forEach(clientEvents, function(event, event_index){
@@ -181,6 +183,8 @@ angular.module("nailShopApp")
 		          	};
 								if(event._id&&Number(event._id)>0) event_new['id'] = Number(event._id);
 		          	scope.data.events.push(event_new);
+								console.info('scope.data.events',scope.data.events);
+
 		          });
 							// ****save 주는 공간
 		          // localStorage.setItem('calendar_events', JSON.stringify( events ) );
