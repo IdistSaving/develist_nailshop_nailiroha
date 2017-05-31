@@ -73,7 +73,7 @@ angular.module("nailShopApp")
 
 		    var calendar = $('#calendar').fullCalendar({
 					height: 750,
-		      local:'ko',
+		      locale:'ko',
 					lang:'ko',
 					// monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
 			    // monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
@@ -94,7 +94,6 @@ angular.module("nailShopApp")
 							// titleFormat, columnFormat, timeFormat
 						}
 					},
-					nowIndicator: default:true,
 		      defaultView: 'agendaWeek',
 		      events: scope.data.events,
 					timeFormat: 'h:mm',
