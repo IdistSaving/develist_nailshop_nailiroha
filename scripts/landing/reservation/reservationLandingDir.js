@@ -159,6 +159,7 @@ angular.module("nailShopApp")
 				    // });
 					},
 		      select: function(start, end, allDay) {
+						console.info('start',start);
 		        var title = prompt('Event Title:');
 		        if (title) {
 		          calendar.fullCalendar('renderEvent',
