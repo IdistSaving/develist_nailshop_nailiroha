@@ -108,14 +108,11 @@ angular.module("nailShopApp")
 					eventRender: function(event, element) {
 		        element.bind('click', function(){
 							if($rootScope.state.current.name == 'landing/admin'){
-								console.info('event',event);
-								console.info('$rootScope.calendar_event',$rootScope.calendar_event);
 		          $rootScope.calendar_event = event;
 							// eventService.events = scope.data.events;
 
 		          ngDialog.open({template:'views/dialog/dialog.html', controller: ['$scope', function($scope){
 								$scope = scope;
-								console.log($scope);
 								$scope.close = function(){
 						  		ngDialog.close();
 						  	};
@@ -180,8 +177,8 @@ angular.module("nailShopApp")
 		          		start:event.start,
 		          		end: event.end
 		          	};
-								console.info('event_new',event_new);
-								console.info('event.start',event.start);
+								// console.info('event_new',event_new);
+								// console.info('event.start',event.start);
 								if(event._id&&Number(event._id)>0) event_new['id'] = Number(event._id);
 		          	scope.data.events.push(event_new);
 								console.info('scope.data.events',scope.data.events);
@@ -193,11 +190,11 @@ angular.module("nailShopApp")
 		      },
 		      editable: ($rootScope.state.current.name == 'landing/admin') ? true : false,
 		      drop: function(date, jsEvent, ui) {
-		        console.log('calendar 2 drop');
-		        console.log(date);
-		        console.log(jsEvent);
-		        console.log(ui);
-		        console.log(this);
+		        // console.log('calendar 2 drop');
+		        // console.log(date);
+		        // console.log(jsEvent);
+		        // console.log(ui);
+		        // console.log(this);
 		        // is the "remove after drop" checkbox checked?
 		        if ($('#drop-remove').is(':checked')) {
 		          // if so, remove the element from the "Draggable Events" list
