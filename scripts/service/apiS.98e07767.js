@@ -25,5 +25,6 @@ angular.module('nailShopApp')
 
   // SOLUTION
   .factory('SiteR', function($resource, ServerURL, ModelUrl, SolutionUrl){ return $resource(ServerURL+ModelUrl+SolutionUrl+'Site/:id/',{id: '@id'},{'update': { method:'PATCH'}}); })
+  .factory('SiteBasicR', function($resource, ServerURL, ModelUrl, SolutionUrl){ return $resource(ServerURL+ModelUrl+SolutionUrl+'SiteBasic/:id/',{id: '@id'},{'update': { method:'PATCH'}}); })
   .factory('PriceR', function($resource, ServerURL, ModelUrl, SolutionUrl){ return $resource(ServerURL+ModelUrl+SolutionUrl+'Price/:id/',{id: '@id'},{'update': { method:'PATCH'}}); })
   .factory('EventR', function($resource, ServerURL, ModelUrl, SolutionUrl){ return $resource(ServerURL+ModelUrl+SolutionUrl+'Event/:id/',{id: '@id'},{'update': { method:'PATCH'}}); });

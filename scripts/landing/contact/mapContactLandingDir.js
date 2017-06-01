@@ -9,7 +9,7 @@ angular.module("nailShopApp")
 				scope.getAddress = function(){
 					return $q(function(resolve, reject){
 						naver.maps.Service.geocode({
-							address: '신당동'
+							address: scope.data.location
 						}, function(status, response) {
 							if (status === naver.maps.Service.Status.ERROR) {
 								return alert('주소가 정확하지 않습니다.');

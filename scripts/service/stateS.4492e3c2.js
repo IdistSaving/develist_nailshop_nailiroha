@@ -30,14 +30,36 @@ angular.module("nailShopApp")
 
 		// Go Function Section
 		this.goBack = function (){
-			if($state.get($state.fromState.name)){ $window.history.back(); }
-			else{ this.go('landing'); }
+			if($state.fromState&&$state.fromState.name&&$state.get($state.fromState.name)){
+				if($state.states&&$state.states.length>=1){
+					for(var i=$state.states.length-1; i>=0; i--){
+						if(!$state.states[i].ignore){
+							this.go($state.states[i].name);
+							return;
+						}
+					}
+				}
+				else{
+					$window.history.back();
+					return;
+				}
+			}
+			else{
+				this.go('landing');
+				return;
+			}
 		};
 
+		// On Section
 		$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 			var self = this;
 			$state.toState = toState;
 			$state.toParams = toParams;
+			if(toState.signin&&!($rootScope.user)){
+				$state.go('signIn');
+			}
+			if(!$state.states) $state.states = [];
+			$state.states.push(fromState);
 			$state.fromState = fromState;
 			$state.fromParams = fromParams;
 	  });

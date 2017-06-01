@@ -36,3 +36,11 @@
 .f-sf-bold {font-family:'SFDisplay-Bold', sans-serif !important;}
 .f-sf-heavy {font-family:'SFDisplay-Heavy', sans-serif !important;}
 .f-sf-black {font-family:'SFDisplay-Black', sans-serif !important;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: white !important;
+  transition: background-color 1000000s ease-in-out 0s;
+}

@@ -3,23 +3,41 @@
 angular.module('nailShopApp')
   .controller('LandingCtrl', function ($rootScope, $scope, $q, SiteR, PriceR, EventR) {
 
+    // Check Function Seciton
+    $scope.checkAdmin = function(){
+      if(!($rootScope.user&&$rootScope.user.develist_user_profile
+        &&$rootScope.site&&$rootScope.site.user_profile
+        &&($rootScope.site.user_profile == $rootScope.user.develist_user_profile))){
+        return false;
+      } else { return true; }
+    };
+
     // Load Function Section
     $scope.loadData = function(){
   		return $q(function(resolve, reject) {
   			SiteR.get({
           host: $rootScope.urlParser.getHostname()
   			}, function(dataResponse_success) {
+          console.log('dataResponse_success', dataResponse_success);
           $scope.data_old = angular.copy(dataResponse_success.results[0]);
           $scope.data = angular.copy($scope.data_old);
   				resolve(dataResponse_success);
   			}, function(dataResponse_error) {
+          console.log('dataResponse_error',dataResponse_error);
   				reject(dataResponse_error);
   			});
   		});
   	};
 
-    // Update Function Section
+    // Sign Function Section
+    $scope.signOut = function(){
+      $rootScope.user = null;
+      storageS.delete('user');
+      storageS.delete('token');
+      $rootScope.stateS.go('signIn', null, null);
+    };
 
+    // Update Function Section
     $scope.updateData = function(){
       $scope.data_update = { id:$scope.data_old.id }; // 업데이트할 값들만 넣는 객체
       for( var prop in $scope.data){ // 모든 key를 돌면서 value가 다른지 체크
@@ -108,55 +126,7 @@ angular.module('nailShopApp')
           $rootScope.stateS.go('landing/signIn', null, null);
         }
       }
-      // admin page 에서만 calendar가 selectable이 될 수 있도록 하는 로직
-
-      // $scope.initializeSelectableOnCalendar();
       $scope.loadData();
-      // $scope.loadDataPriceFromServer();
-
-      // $scope.isAdmin = null;
-      // $scope.isAdmin = ($rootScope.state.current.name == 'landing/admin')?true:false;
-
-      // if($rootScope.state.current.name == 'landing/admin'){
-      //   $scope.isAdmin = true;
-      // }else{
-      //   $scope.isAdmin = false;
-      // };
-      // console.info('$rootScope.state',$rootScope.state.current.name);
-      // console.info('$scope.isAdmin',$scope.isAdmin);
-
-      //
-      // if($rootScope.urlParser.getHostname()){
-      //   $scope.loadDataSiteFromServer();
-      //   $scope.loadDataPriceRFromServer();
-      // }
-      //
-      // 	scope.obj_old = { // 서버에서 받아온 값
-      //   id : 1,
-      //   text1 : 'TEXT',
-      //   text2 : 'TEXT',
-      //   image1 : 'IMAGE',
-      //   image2 : 'IMAGE'
-      // };
-      //
-      // scope.obj = angular.copy(scope.obj_old); // 서버에서 받아온 값을 복사해서 작업용도로 사용
-      //
-      // var scope.obj_new = { id:scope.obj_old.id }; // 업데이트할 값들만 넣는 객체
-      //
-      // for( var prop in scope.obj_old){ // 모든 key를 돌면서 value가 다른지 체크
-      //   if(!(scope.obj[prop]==scope.obj_old[prop])){
-      //     scope.obj_new[prop] = scope.obj[prop]
-      //   }
-      // }
-      //
-      // // scope.obj_new = { // 비교 연산 결과
-      // //   id : 1,
-      // //   text2 : 'TEXT',
-      // //   image1 : 'IMAGE'
-      // // }
-      //
-      // SiteR.update(scope.obj_new, function(){});
-
       $scope.nailShop = {
         cover_title:"nailideparis",
         description:"유니크한 일상",
@@ -180,15 +150,19 @@ angular.module('nailShopApp')
         time_weekdays:"WEEKDAYS AM 05:00 ~ PM 08:00",
         time_weekend:"WEEKENDS AM 06:00 ~ PM 07:00"
       };
-
-
+      if($rootScope.state.current.name =='landing/admin'){
+        if(!$scope.checkAdmin()){
+          $rootScope.stateS.go('signIn', null, null);
+        }
+      }
     };
-    $rootScope.$watch('state.current.name', function(){
-      console.log($rootScope.state.current.name);
+
+    // Watch Function Section
+    var watch1 = $rootScope.$watch('state.current.name', function(){
       if($rootScope.state.current.name=='landing'||$rootScope.state.current.name=='landing/admin'){
-        console.log('initialize');
         $scope.initialize();
       }
     });
+    $scope.$on('$destroy', function(){ watch1(); });
 
   });

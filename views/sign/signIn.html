@@ -22,14 +22,10 @@
       <div class="xw-315px mt-120px cen-x">
         <!-- Id, Password Input -->
         <div class="w-100 h-46px bo_b-1px c-we" ng-class="[ {'bo-we_50':!email_focus}, {'bo-we':email_focus} ]">
-        	<div class="w-100 ml-15px cen-y">
-        		<input class="w-100 c-we f-15px pc-we" placeholder="EMAIL" ng-focus="email_focus=true;" ng-blur="email_focus=false;" ng-model="email" ng-keyup="saveEmail();">
-        	</div>
+      		<input class="w-100 c-we f-15px lh-46px pc-we pl-15px pr-15px" placeholder="EMAIL" ng-focus="email_focus=true;" ng-blur="email_focus=false;" ng-model="email" ng-enter="signIn();">
         </div>
        	<div class="w-100 h-46px mt-15px bo_b-1px c-we" ng-class="[ {'bo-we_50':!password_focus}, {'bo-we':password_focus} ]">
-          <div class="w-100 ml-15px cen-y">
-        		<input class="w-100 c-we f-15px pc-we" type="PASSWORD" placeholder="PASSWORD" ng-focus="password_focus=true" ng-blur="password_focus=false" ng-model="password">
-        	</div>
+      		<input class="w-100 c-we f-15px lh-46px pc-we pl-15px pr-15px" type="PASSWORD" placeholder="PASSWORD" ng-focus="password_focus=true" ng-blur="password_focus=false" ng-model="password">
         </div>
         <!-- Login Button -->
        	<div class="w-100 h-46px mt-60px o-50 o-100-H">

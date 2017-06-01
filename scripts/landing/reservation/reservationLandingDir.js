@@ -13,8 +13,8 @@ angular.module("nailShopApp")
 
 		      var external_events = $( '#external-events' );
 		      var offset = external_events.offset();
-		      offset.right = external_events.width() + offset.left;
-		      offset.bottom = external_events.height() + offset.top;
+		      offset.right = external_events.width();
+		      offset.bottom = external_events.height();
 
 		      // Compare
 		      if (x >= offset.left
@@ -108,11 +108,14 @@ angular.module("nailShopApp")
 					eventRender: function(event, element) {
 		        element.bind('click', function(){
 							if($rootScope.state.current.name == 'landing/admin'){
+								console.info('event',event);
+								console.info('$rootScope.calendar_event',$rootScope.calendar_event);
 		          $rootScope.calendar_event = event;
 							// eventService.events = scope.data.events;
 
 		          ngDialog.open({template:'views/dialog/dialog.html', controller: ['$scope', function($scope){
 								$scope = scope;
+								console.log($scope);
 								$scope.close = function(){
 						  		ngDialog.close();
 						  	};
@@ -190,11 +193,11 @@ angular.module("nailShopApp")
 		      },
 		      editable: ($rootScope.state.current.name == 'landing/admin') ? true : false,
 		      drop: function(date, jsEvent, ui) {
-		        // console.log('calendar 2 drop');
-		        // console.log(date);
-		        // console.log(jsEvent);
-		        // console.log(ui);
-		        // console.log(this);
+		        console.log('calendar 2 drop');
+		        console.log(date);
+		        console.log(jsEvent);
+		        console.log(ui);
+		        console.log(this);
 		        // is the "remove after drop" checkbox checked?
 		        if ($('#drop-remove').is(':checked')) {
 		          // if so, remove the element from the "Draggable Events" list
