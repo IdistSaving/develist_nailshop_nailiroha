@@ -1,19 +1,20 @@
 <div class="w-100 h-100 p-a z-2 b-bk o-60"></div>
 <img class="w-100 h-100 p-a z-1 b-img" ng-src="https://source.unsplash.com/1920x1080">
 <div class="w-100 h-100 p-a z-3" ng-init="signInField=false;">
-  <!-- field -->
-  <div class="w-450px h-600px cen">
-    <div class="w-100 animated v-hidden bo-1px c-we" style="font-family: 'Nanum Gothic', sans-serif"
+  <!-- WEB -->
+  <!-- Login Field -->
+  <div class="w-450px h-600px cen d-n-X1000">
+    <div class="w-100 animated v-hidden bo-1px c-we"
     in-view="signInField=$inview;"
     ng-class="{'fadeInUp v-visible':signInField==true}">
+      <!-- Close Button -->
       <div class="p-a t-0 r-0 w-60px h-60px o-50 o-100-H" ng-click="closeLogin();">
-          <div class="w-30px h-30px cen">
-            <div class="cen">
-              <i class="w-100 h-100 f-30px lh-32px c-we t-l ion-android-close"></i>
-            </div>
+        <div class="w-30px h-30px cen">
+          <div class="cen">
+            <i class="w-100 h-100 f-30px lh-32px c-we t-l ion-android-close"></i>
           </div>
+        </div>
       </div>
-
       <div class="w-100 mt-120px">
         <div class="cen-x">
           <span class="f-48px lh-50px c-we t-c">환영합니다!</span>
@@ -39,6 +40,86 @@
         </div>
       </div>
     </div>
-
   </div>
+  <!-- Tablet -->
+  <!-- Login Field -->
+  <div class="w-350px h-450px cen d-n-X500 d-n-N1000">
+    <div class="w-100 animated v-hidden bo-1px c-we"
+    in-view="signInField=$inview;"
+    ng-class="{'fadeInUp v-visible':signInField==true}">
+      <!-- Close Button -->
+      <div class="p-a t-0 r-0 w-60px h-60px o-50 o-100-H" ng-click="closeLogin();">
+        <div class="w-30px h-30px cen">
+          <div class="cen">
+            <i class="w-100 h-100 f-30px lh-32px c-we t-l ion-android-close"></i>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 mt-60px">
+        <div class="cen-x">
+          <span class="f-48px lh-50px c-we t-c">환영합니다!</span>
+        </div>
+      </div>
+      <div class="xw-300px mt-60px cen-x">
+        <!-- Id, Password Input -->
+        <div class="w-100 h-46px bo_b-1px c-we" ng-class="[ {'bo-we_50':!email_focus}, {'bo-we':email_focus} ]">
+      		<input class="w-100 c-we f-15px lh-46px pc-we pl-15px pr-15px" placeholder="EMAIL" ng-focus="email_focus=true;" ng-blur="email_focus=false;" ng-model="email" ng-enter="signIn();">
+        </div>
+       	<div class="w-100 h-46px mt-15px bo_b-1px c-we" ng-class="[ {'bo-we_50':!password_focus}, {'bo-we':password_focus} ]">
+      		<input class="w-100 c-we f-15px lh-46px pc-we pl-15px pr-15px" type="PASSWORD" placeholder="PASSWORD" ng-focus="password_focus=true" ng-blur="password_focus=false" ng-model="password">
+        </div>
+        <!-- Login Button -->
+       	<div class="w-100 h-46px mt-60px o-50 o-100-H">
+          <button class="w-100 h-100 f-18px bo-1px c-we b-we-H c-bk-H" ng-click="signIn();">로그인</button>
+        </div>
+        <!-- Login Help -->
+       	<div class="w-100 h-46px mt-30px">
+          <div class="cen-x" ng-click="helpClick();">
+            <span class="f-15px c-we t-c o-50 o-100-H">로그인에 문제가 있으신가요?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- APP -->
+  <!-- Login Field -->
+  <div class="w-100 h-100 d-n-N500">
+    <div class="w-100 h-100 animated v-hidden"
+    in-view="signInField=$inview;"
+    ng-class="{'fadeIn v-visible':signInField==true}">
+      <!-- Close Button -->
+      <div class="p-a t-0 r-0 w-60px h-60px o-50 o-100-H" ng-click="closeLogin();">
+        <div class="w-30px h-30px cen">
+          <div class="cen">
+            <i class="w-100 h-100 f-30px lh-32px c-we t-l ion-android-close"></i>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 mt-120px">
+        <div class="cen-x">
+          <span class="f-48px lh-50px c-we t-c">환영합니다!</span>
+        </div>
+      </div>
+      <div class="xw-300px mt-120px cen-x">
+        <!-- Id, Password Input -->
+        <div class="w-100 h-46px bo_b-1px c-we" ng-class="[ {'bo-we_50':!email_focus}, {'bo-we':email_focus} ]">
+          <input class="w-100 c-we f-15px lh-46px pc-we pl-15px pr-15px" placeholder="EMAIL" ng-focus="email_focus=true;" ng-blur="email_focus=false;" ng-model="email" ng-enter="signIn();">
+        </div>
+        <div class="w-100 h-46px mt-15px bo_b-1px c-we" ng-class="[ {'bo-we_50':!password_focus}, {'bo-we':password_focus} ]">
+          <input class="w-100 c-we f-15px lh-46px pc-we pl-15px pr-15px" type="PASSWORD" placeholder="PASSWORD" ng-focus="password_focus=true" ng-blur="password_focus=false" ng-model="password">
+        </div>
+        <!-- Login Button -->
+        <div class="w-100 h-46px mt-60px o-50 o-100-H">
+          <button class="w-100 h-100 f-18px bo-1px c-we b-we-H c-bk-H" ng-click="signIn();">로그인</button>
+        </div>
+        <!-- Login Help -->
+        <div class="w-100 h-46px mt-30px">
+          <div class="cen-x" ng-click="helpClick();">
+            <span class="f-15px c-we t-c o-50 o-100-H">로그인에 문제가 있으신가요?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

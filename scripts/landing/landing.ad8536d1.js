@@ -120,12 +120,7 @@ angular.module('nailShopApp')
     // };
 
     $scope.initialize = function(){
-      if($rootScope.state.current.name =='landing/admin'){
-        if(!$rootScope.urlParser.getHostname()){
-          alert('회원만 사용가능합니다.');
-          $rootScope.stateS.go('landing/signIn', null, null);
-        }
-      }
+
       $scope.loadData();
       $scope.nailShop = {
         cover_title:"nailideparis",

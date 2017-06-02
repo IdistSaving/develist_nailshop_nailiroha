@@ -51,7 +51,10 @@ angular.module("nailShopApp")
         scope.initialize();
 			},
 			replace: true,
-			scope:false,
+			scope:{
+				data:"=data",
+				nailShop:"=nailShop"
+			},
 			restrict:"EA",
 			templateUrl: 'views/landing/contact/mapContactLandingDir.html'
 

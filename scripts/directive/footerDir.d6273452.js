@@ -11,6 +11,11 @@ angular.module("nailShopApp")
 					$rootScope.stateS.go('landing', null, null);
 				};
 
+				// Cancel Function Section
+				scope.logoOutButton = function(){
+					(confirm('로그아웃 하시나요?'))
+					scope.signOut();
+				};
 
 				// Function Section
 				scope.saveButton = function(){
@@ -25,7 +30,7 @@ angular.module("nailShopApp")
 						scope.data_update.cover_image = image_64;
 					});
 				};
-				
+
 			},
 			replace: true,
 			scope:false,
